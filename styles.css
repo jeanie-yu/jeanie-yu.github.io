@@ -1,0 +1,430 @@
+@font-face {
+    font-family: 'Pixelify Sans';
+    src: url('DancingScript-VariableFont_wght.ttf');
+    font-family: 'Avenir';
+    src: url('https://fonts.cdnfonts.com/css/avenir');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Avenir';
+    cursor: none;
+    color: white;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 35px;
+    text-align: left;
+}
+
+.archive-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    justify-content: center;
+}
+
+
+
+.archive-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    height: 480px;
+    width: 100%;
+}
+
+.archive-container img {
+    height: 450px;
+    background-color: transparent;
+    transition: transform .5s, border .5s;
+}
+
+.archive-container .archive-adjust1{
+    height:400px;
+    }
+
+    .archive-container .archive-adjust2{
+        height:430px;
+        }
+
+        .archive-container  .archive-adjust3{
+            height:410px;
+            }
+
+            .archive-container  .archive-adjust4{
+                height:460px;
+                }
+                .archive-container  .archive-adjust5{
+                    height:430px;
+                    margin-left:-50px;
+                    }
+
+.archive-container img:hover {
+    transform: scale(1.1) rotate(5deg);
+    font-size: 16px;
+    z-index: 99999;
+}
+
+
+.title-container {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.title-container-project {
+    position: fixed;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    z-index: 9999999999999;
+}
+
+.title-space {
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 250px;
+}
+
+.title-space-project {
+    margin-left: 30px;
+    margin-top: 20px;
+    width: 250px;
+}
+
+.small-title-container-main {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    gap: 0px;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size: 25px;
+    z-index: 9999999;
+}
+
+.small-title-container-main img {
+    height: 40px;
+}
+
+.small-title-container {
+    display: flex;
+    position: fixed;
+    justify-content: right;
+    text-align: right;
+    align-items: right;
+    gap: 0px;
+    margin-top: 15px;
+    right: 20px;
+    font-size: 25px;
+}
+
+.small-title-container img {
+    height: 40px;
+}
+
+.cursor-white {
+    position: fixed;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    z-index: 999999999999999;
+    pointer-events: none;
+    background-color: white;
+    transform: translate(-50%, -50%);
+}
+
+.tooltip-container {
+    position: fixed;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -50px;
+    font-size: 15px;
+    margin-top: 43px;
+
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.type {
+    position: relative;
+}
+
+.type span {
+    position: relative;
+    display: inline-block;
+    animation: flip 3s;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.project {
+    text-align: center;
+    font-size: 50px;
+}
+
+.intro {
+    font-size: 18px;
+    margin-top: -25px;
+}
+
+.top-space {
+    padding-top: 100px;
+}
+
+.project-description-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 5%;
+    margin-left: 30px;
+    margin-top: 30px;
+    z-index: 99999;
+}
+
+.project-description-wrapper {
+    width: 25%;
+}
+
+.project-description {
+    width: 25%;
+    max-width: 500px;
+    position: fixed;
+}
+
+.project-description h2 {
+    letter-spacing: 1px;
+}
+
+.project-images {
+    width: 100vw;
+    margin-left: 33vw;
+    margin-top: -10px;
+    justify-content: center;
+}
+
+.project-images img {
+    margin-bottom: 17vh;
+    width: 55vw;
+}
+
+.mobile-break {
+    position: absolute;
+}
+
+.meta {
+    padding-bottom: 1rem;
+}
+
+/*custoom page override*/
+.the-abstract-world .project-description {
+    max-width: 23%;
+}
+
+.mapping-and-visualizing-data .project-images img {
+    width: 45%;
+}
+
+.bubble-bliss-summer-soire .project-images img {
+    width: 32vw;
+    position: fixed;
+    margin-top: -25px;
+    margin-left: 12vw;
+}
+
+.poster-design .project-images img {
+    width: 30vw;
+    position: fixed;
+    margin-top: -25px;
+    margin-left: 13vw;
+}
+
+.creative-coding .project-images img {
+    margin-top: 18px;
+    position: fixed;
+}
+
+.neri-oxman-glass-series .project-images img {
+    width: 28.5vw;
+    margin-top: -75px;
+    margin-left: 14.5vw;
+}
+
+.project-images .taipei-2024-art-book-fair-poster img {
+    width: 28.5vw;
+    margin-top: -80px;
+    margin-left: 14.5vw;
+}
+
+.project-images .taipei-2024-art-book-fair-horizontal img {
+    margin-top: -15px;
+    margin-left: 1.5vw;
+}
+
+@media screen and (max-width: 768px) {
+    .cursor-white{
+        display:none;
+    }
+    .mobile-break {
+        display: none;
+    }
+
+    .archive-container {
+        grid-template-columns: 1fr;
+        gap: 0px;
+
+        margin-left: 0px;
+    }
+    .archive-container div {
+        height: 400px;
+    }
+    .archive-container div img{
+        height:350px;
+    }
+    .archive-container .archive-adjust1{
+        height:290px;
+        }
+    
+        .archive-container .archive-adjust2{
+            height:310px;
+
+
+            }
+    
+            .archive-container  .archive-adjust3{
+                height:300px;
+
+                }
+    
+                .archive-container  .archive-adjust4{
+                    height:300px;
+                    }
+                    .archive-container  .archive-adjust5{
+                        height:300px;
+                        margin-left:0;
+                        }
+ 
+    .project-description {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .project-description-wrapper {
+        width: 100%;
+    }
+
+    .project-images {
+        margin-left: 0;
+        margin-top: 50px;
+        margin-bottom: -250px;
+        width: 100%;
+    }
+
+    .project-images img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .title-container-project {
+        position: relative;
+    }
+
+    .small-title-container {
+        position: relative;
+    }
+
+    .top-space {
+        padding-top: 0;
+    }
+
+    .the-abstract-world .project-description {
+        max-width: 100%;
+    }
+
+    .mapping-and-visualizing-data .project-images img {
+        width: 58vw;
+    }
+
+    .bubble-bliss-summer-soire .project-images img {
+        width: 65vw;
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .poster-design .project-images img {
+        width: 63vw;
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .creative-coding .project-images img {
+        margin-top: 0;
+        position: relative;
+        margin-bottom: 50px;
+        width: 88vw;
+    }
+
+    .neri-oxman-glass-series .project-images img {
+        margin-top: 0;
+        width: 88vw;
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
+
+    .project-images .taipei-2024-art-book-fair-poster img {
+        margin-top: 0;
+        width: 88vw;
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
+
+    .project-images .taipei-2024-art-book-fair-horizontal img {
+        width: 88vw;
+        margin-left: 0;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
