@@ -340,8 +340,6 @@ h1 {
     }
 
     .archive-container img:hover {
-        display: none;
-        transition: none;
         transform: none;
     }
 
