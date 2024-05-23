@@ -28,3 +28,32 @@ window.onscroll = function() {
     
     };
 
+    document.querySelectorAll('.couponcode').forEach(item => {
+        item.addEventListener('mousemove', event => {
+            const tooltip = item.querySelector('.coupontooltip');
+            const tooltipWidth = tooltip.clientWidth;
+            const tooltipHeight = tooltip.clientHeight;
+            const pageWidth = document.documentElement.scrollWidth;
+            const pageHeight = document.documentElement.scrollHeight;
+    
+            let x = event.pageX + 10;
+            let y = event.pageY + 10;
+    
+            if (x + tooltipWidth > pageWidth) {
+                x = pageWidth - tooltipWidth - 5;
+            }
+    
+            if (y + tooltipHeight > pageHeight) {
+                y = pageHeight - tooltipHeight - 5;
+            }
+    
+            tooltip.style.left = x + 'px';
+            tooltip.style.top = y + 'px';
+        });
+    });
+    
+    
+    
+
+    
+    

@@ -177,6 +177,27 @@ h1 {
     visibility: visible;
 }
 
+.couponcode {
+    color: white;
+}
+
+.coupontooltip {
+    visibility: hidden;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    color: black;
+    padding: 3px;
+    z-index: 10000000;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.couponcode:hover .coupontooltip {
+    visibility: visible;
+}
+
+
 .type {
     position: relative;
 }
@@ -302,6 +323,7 @@ h1 {
     }
 
     .archive-container {
+        width:100vw;
         grid-template-columns: 1fr;
         gap: 0px;
 
@@ -313,26 +335,36 @@ h1 {
     .archive-container div img{
         height:350px;
     }
+    .archive-container img {
+        transition: none;
+    }
+
+    .archive-container img:hover {
+        display: none;
+        transition: none;
+        transform: none;
+    }
+
     .archive-container .archive-adjust1{
-        height:290px;
+        height:270px;
         }
     
         .archive-container .archive-adjust2{
-            height:310px;
+            height:300px;
 
 
             }
     
             .archive-container  .archive-adjust3{
-                height:300px;
+                height:290px;
 
                 }
     
                 .archive-container  .archive-adjust4{
-                    height:300px;
+                    height:290px;
                     }
                     .archive-container  .archive-adjust5{
-                        height:300px;
+                        height:270px;
                         margin-left:0;
                         }
  
@@ -418,6 +450,13 @@ h1 {
         margin-left: 0;
         margin-bottom: 50px;
         margin-top: 0;
+    }
+       .tooltip .tooltiptext {
+        visibility: hidden !important;
+    }
+
+    .couponcode:hover .coupontooltip {
+        display: none;
     }
 }
 
