@@ -71,6 +71,8 @@ h1 {
                     height:400px;
                     margin-left:-50px;
                     }
+                
+
 
 .archive-container img:hover {
     transform: scale(1.1) rotate(5deg);
@@ -355,16 +357,28 @@ h1 {
     
             .archive-container  .archive-adjust3{
                 height:290px;
-
                 }
-    
                 .archive-container  .archive-adjust4{
-                    height:290px;
+                    height:310px;
+                    margin-top: -80px;
                     }
                     .archive-container  .archive-adjust5{
                         height:270px;
                         margin-left:0;
                         }
+
+                        .archive-container  .archive-adjust6{
+                            height:320px;
+                            margin-left:0;
+                            margin-top: -60px;
+                            }
+                            .archive-container  .archive-adjust7{
+                                height:375px;
+                                margin-left:0;
+                                margin-top: -60px;
+                                }
+
+
  
     .project-description {
         position: relative;
