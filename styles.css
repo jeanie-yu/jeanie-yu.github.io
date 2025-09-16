@@ -71,6 +71,18 @@ h1 {
                     height:400px;
                     margin-left:-50px;
                     }
+                        .archive-container  .archive-adjust9{
+                            height:120px;
+                            margin-left:-100px;
+                            }
+                            .archive-container  .archive-adjust10{
+                                height:460px;
+                                margin-left:0px;
+                                }
+                                .archive-container  .archive-adjust11{
+                                    height:380px;
+                                    margin-left:-50px;
+                                    }
                 
 
 
@@ -294,8 +306,15 @@ h1 {
     margin-left: 13vw;
 }
 
+
+
 .creative-coding .project-images img {
     margin-top: 18px;
+    position: fixed;
+}
+
+.home-to-home .project-images img {
+    margin-top: 55px;
     position: fixed;
 }
 
@@ -377,6 +396,7 @@ h1 {
                                 margin-left:0;
                                 margin-top: -60px;
                                 }
+                          
 
 
  
