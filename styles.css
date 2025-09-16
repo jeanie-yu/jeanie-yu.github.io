@@ -370,6 +370,7 @@ h1 {
     
         .archive-container .archive-adjust2{
             height:300px;
+            margin-top: -120px;
 
 
             }
@@ -396,6 +397,26 @@ h1 {
                                 margin-left:0;
                                 margin-top: -60px;
                                 }
+
+                                .archive-container  .archive-adjust9{
+                                    height:80px;
+                                    margin-left:0;
+                                    margin-top: 0px;
+                                    }
+
+                                    .archive-container  .archive-adjust10{
+                                        height:380px;
+                                        margin-left:0;
+                                        margin-top: 0px;
+                                        }
+
+                                .archive-container  .archive-adjust11{
+                                    height:235px;
+                                    margin-left:0;
+                                    margin-top: -60px;
+                                    }
+
+
                           
 
 
