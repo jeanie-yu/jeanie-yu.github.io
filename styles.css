@@ -491,6 +491,14 @@ h1 {
         margin-left: 0;
     }
 
+    .home-to-home .project-images img {
+        margin-top: 0;
+        width: 88vw;
+        margin-bottom: 50px;
+        margin-left: 0;
+        position: relative;
+    }
+
     .project-images .taipei-2024-art-book-fair-poster img {
         margin-top: 0;
         width: 88vw;
