@@ -487,8 +487,8 @@ h1 {
 
     .project-images {
         margin-left: 0;
-        /* margin-top: 50px; */
-        /* margin-bottom: -250px; */
+        margin-top: 50px;
+        margin-bottom: -250px;
         width: 100%;
     }
 
