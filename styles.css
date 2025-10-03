@@ -383,6 +383,9 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+
+    :root { --header-scale: 0.6; }   /* 60% on mobile */
+
     .cursor-white{
         display:none;
     }
@@ -403,28 +406,43 @@ h1 {
 
     }
     .archive-container div {
-        height: 400px;
         /* margin-top: 0; */
+        height: 53vh;            
+        /* height: auto; */
+        /* no fixed heights on mobile */
+        /* padding: 20px;        */
+         /* <-- inner margin */
+
+        overflow: hidden;        /* crop overflow instead of showing black */
+        background: #000;  
+
+
 
     }
-    .archive-container div img{
+    /* .archive-container div img{
         height:350px;
-    }
-    .archive-container img {
+        object-fit: cover;
+    } */
+    .archive-container div img {
         transition: none;
+        width: 100%;
+        height: 100%;
+        /* margin:10vw; */
+        object-fit: cover;       /* fills without letterboxing */
+        display: block;
+        
     }
 
     .archive-container img:hover {
         transform: none;
     }
 
-    .archive-container .archive-adjust1{
+    /* .archive-container .archive-adjust1{
         height:270px;
         }
     
         .archive-container .archive-adjust2{
             height:300px;
-            /* margin-top: -120px; */
 
 
             }
@@ -434,11 +452,9 @@ h1 {
                 }
                 .archive-container  .archive-adjust4{
                     height:310px;
-                    /* margin-top: -80px; */
                     }
                     .archive-container  .archive-adjust5{
                         height:270px;
-                        /* margin-left:0; */
                         }
 
                         .archive-container  .archive-adjust6{
@@ -447,31 +463,27 @@ h1 {
                             }
                             .archive-container  .archive-adjust7{
                                 height:375px;
-                                /* margin-top: -60px; */
                                 }
 
                                 .archive-container  .archive-adjust9{
                                     height:80px;
                                     margin-left:0;
-                                    /* margin-top: 0px; */
                                     }
 
                                     .archive-container  .archive-adjust10{
-                                        height:46vh;
-                                        margin-left:0;
-                                        /* margin-top: 0px; */
+                                        width: 100%;
+                                        margin: 0;
                                         }
 
                                 .archive-container  .archive-adjust11{
                                     height:235px;
                                     margin-left:0;
-                                    /* margin-top: -60px; */
                                     }
                                     .archive-container  .archive-adjust12{
                                         height:370px;
                                         margin-left:0;
                                         }
-  
+   */
 
 
  
@@ -490,6 +502,7 @@ h1 {
         margin-top: 50px;
         margin-bottom: -250px;
         width: 100%;
+
     }
 
     .project-images img {
@@ -497,16 +510,52 @@ h1 {
         margin-left: 0;
     }
 
+    .title-container {
+        /* transform: scale(0.7); */
+        gap:25px;
+        transform: scale(0.9);
+        margin-top: -2vw;;
+        margin-left: -4.5vw;
+
+
+
+
+      }
+
+      .small-title-container-main {
+        position: relative;
+        transform: scale(0.8);
+        margin-top: 0vw;
+        margin-right: -5.5vw;
+
+
+
+    }
+      
+
     
 
     .title-container-project {
         position: relative;
+        transform: scale(0.9);
+        margin-top: -1vw;
+        margin-left: -4.5vw;
+
     }
 
     .small-title-container {
         position: relative;
+        margin-top: 1.15vw;
+        margin-right: -9.5vw;
+
+
+        transform: scale(0.8);
+
 
     }
+
+
+
 
     .top-space {
         padding-top: 0;
