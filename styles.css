@@ -390,6 +390,8 @@ h1 {
         display: none;
     }
 
+  
+
     .archive-container {
         width:90vw;
         grid-template-columns: 1fr;
@@ -428,7 +430,7 @@ h1 {
             }
     
             .archive-container  .archive-adjust3{
-                height:290px;
+                height:35vh;
                 }
                 .archive-container  .archive-adjust4{
                     height:310px;
@@ -455,7 +457,7 @@ h1 {
                                     }
 
                                     .archive-container  .archive-adjust10{
-                                        height:360px;
+                                        height:47vh;
                                         margin-left:0;
                                         /* margin-top: 0px; */
                                         }
@@ -498,12 +500,15 @@ h1 {
         margin-left: 0;
     }
 
+    
+
     .title-container-project {
         position: relative;
     }
 
     .small-title-container {
         position: relative;
+
     }
 
     .top-space {
