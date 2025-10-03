@@ -515,7 +515,7 @@ h1 {
 
     .project-images img {
         width: 100%;
-        margin-left: 0;
+        /* margin-left: 0; */
     }
 
     .title-container {
