@@ -407,11 +407,15 @@ h1 {
     }
     .archive-container div {
         /* margin-top: 0; */
-        height: 53vh;            
-        /* height: auto; */
+        /* height: 53vh;             */
+        padding: 20px;           /* <-- the visible “margin” around image */
+        height: auto;
+        width: auto;
         /* no fixed heights on mobile */
         /* padding: 20px;        */
          /* <-- inner margin */
+         /* border: 0px;  */
+
 
         overflow: hidden;        /* crop overflow instead of showing black */
         background: #000;  
@@ -426,10 +430,14 @@ h1 {
     .archive-container div img {
         transition: none;
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
+        height:auto;
+     
         /* margin:10vw; */
         object-fit: cover;       /* fills without letterboxing */
         display: block;
+        object-fit: contain;
+        object-position: center center;
         
     }
 
@@ -525,7 +533,7 @@ h1 {
       .small-title-container-main {
         position: relative;
         transform: scale(0.8);
-        margin-top: 0vw;
+        margin-top: -2vw;
         margin-right: -5.5vw;
 
 
