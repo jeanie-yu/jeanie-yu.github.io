@@ -533,7 +533,7 @@ h1 {
       .small-title-container-main {
         position: relative;
         transform: scale(0.8);
-        margin-top: -3vw;
+        margin-top: -2.5vw;
         margin-right: -5.5vw;
 
 
@@ -554,7 +554,7 @@ h1 {
     .small-title-container {
         position: relative;
         margin-top: 1.15vw;
-        margin-right: -9.5vw;
+        margin-right: -10vw;
 
 
         transform: scale(0.8);
