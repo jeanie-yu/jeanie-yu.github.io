@@ -660,4 +660,15 @@ h1 {
         visibility: hidden !important;
     }
 
-    .co
+    .couponcode:hover .coupontooltip {
+        display: none;
+    }
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
