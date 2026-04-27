@@ -391,6 +391,7 @@ h1 {
 }
 
 
+
 .archive-container .full-card {
     display: block;       /* ignore the flex behavior from .archive-container div */
     overflow: hidden;     /* crop anything outside the card box */
@@ -410,6 +411,14 @@ h1 {
     height: 100% !important;   /* override archive-adjust1 fixed height */
     object-fit: cover;         /* keep ratio, zoom to cover */
     object-position: center;
+}
+
+.archive-container .full-card video.trace-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fullbleed */
+    object-position: center;
+    display: block;
 }
 
 
@@ -561,6 +570,7 @@ h1 {
         height: auto;
         display: block;
     }
+
 
     .title-container {
         /* transform: scale(0.7); */
