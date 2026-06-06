@@ -55,6 +55,31 @@ h1 {
 
 }
 
+
+
+.archive-container .card {
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.archive-container .card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%;
+    width: 100%; */
+}
+
+.archive-container .card img,
+.archive-container .card video {
+    width: auto;
+    /* height: 100%;
+    max-width: 100%; */
+    object-fit: contain;
+    display: block;
+}
+
 .archive-container img {
     /* height: 300px; */
     width: 100%;
@@ -99,7 +124,7 @@ h1 {
                                         height:430px;
                                         }
 
-                
+                                    
 
 
 /* .archive-container div:hover {
@@ -485,53 +510,6 @@ h1 {
         transform: none;
     }
 
-    /* .archive-container .archive-adjust1{
-        height:270px;
-        }
-    
-        .archive-container .archive-adjust2{
-            height:300px;
-
-
-            }
-    
-            .archive-container  .archive-adjust3{
-                height:35vh;
-                }
-                .archive-container  .archive-adjust4{
-                    height:310px;
-                    }
-                    .archive-container  .archive-adjust5{
-                        height:270px;
-                        }
-
-                        .archive-container  .archive-adjust6{
-                            height:320px;
-                            margin-left:0;
-                            }
-                            .archive-container  .archive-adjust7{
-                                height:375px;
-                                }
-
-                                .archive-container  .archive-adjust9{
-                                    height:80px;
-                                    margin-left:0;
-                                    }
-
-                                    .archive-container  .archive-adjust10{
-                                        width: 100%;
-                                        margin: 0;
-                                        }
-
-                                .archive-container  .archive-adjust11{
-                                    height:235px;
-                                    margin-left:0;
-                                    }
-                                    .archive-container  .archive-adjust12{
-                                        height:370px;
-                                        margin-left:0;
-                                        }
-   */
 
 
  
