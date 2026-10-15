@@ -14,41 +14,19 @@
 
     <div class="title-container-project">
         <div class="title-space">
-            <h1>Jeanie Yu</h1>
-            <a href="index.html" style="text-decoration:none;">
+            <h1 class="logo-heading"><a href="index.html" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()"><img src="jeanielogo.svg" alt="Jeanie Yu" class="site-logo"></a></h1>
+            <a href="index.html" class="project-home" style="text-decoration:none;">
                 <p class="type intro" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
                     &lt; home
                 </p>
             </a>
+            <nav class="site-nav project-nav">
+                <a href="about.html" class="nav-link" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">About Me</a>
+                <a href="index.html" class="nav-link active" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Projects</a>
+                <a href="gallery.html" class="nav-link" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Gallery</a>
+            </nav>
         </div>
 
-        <div class="small-title-container">
-            <div class="tooltip">
-                <span class="tooltiptext">Email</span>
-                <a href="mailto:jeanie920319@gmail.com" target="_blank">
-                    <img src="email.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-                </a>
-            </div>
-            <div class="tooltip">
-                <span class="tooltiptext">Instagram</span>
-                <a href="https://www.instagram.com/jeaniey.design/" target="_blank">
-                    <img src="instagram.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-                </a>
-            </div>
-            <div class="tooltip">
-                <span class="tooltiptext">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/jeanie-yu-b091352a5/" target="_blank">
-                    <img src="linkedin.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-                </a>
-            </div>
-            <div class="tooltip">
-                <span class="tooltiptext">Resume Avalible Upon Request</span>
-                <!-- <a href="https://drive.google.com/file/d/1Kip4PnM1TdioApSbdXEUCrGFt4jl2-h6/view?usp=sharing"
-                    target="_blank"> -->
-                    <img src="resume.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-                </a>
-            </div>
-        </div>
     </div>
 
   <div class="top-space">
@@ -58,10 +36,6 @@
            <h2> The Old Man and The Sea</h2>
            <div class="meta">
            <p>Book Design | 2023</p>
-           <p>5.5"x 8.5"</p>
-           <p>116 pages</p>
-            <p>Laser Print on Vellum Paper</p>
-            <p>Black Ink on Printer Paper</p>
            </div>
            <p>A perfected binded book design that combines classic fiction literature with poetry using a refined version of golden ratio book layout. This brings together two masterful works: The Old Man and The Sea by the iconic Ernest Hemingway, and The Ocean by the poet Nathaniel Hawthorne. The poem was printed on vellum paper overlapping the traditional literature bringing the audience into the theme of the ocean.  
 </p>
@@ -80,6 +54,7 @@
 </div>
 
     <script src="script.js"></script>
+    <script src="project-align.js"></script>
 </body>
 
 </html>

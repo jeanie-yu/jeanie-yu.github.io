@@ -1,0 +1,176 @@
+/* ==========================================================
+   GALLERY PAGE ONLY (loaded only by gallery.html)
+   ========================================================== */
+
+html, body.gallery-page {
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    background: black;
+}
+
+#gallery {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background: black;
+    touch-action: none;          /* we handle dragging ourselves */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#gallery-world {
+    position: absolute;
+    left: 0;
+    top: 0;
+    will-change: transform;
+}
+
+/* Square cells, styled like the homepage project tiles */
+.g-cell {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    background: black;
+    overflow: hidden;
+}
+
+/* Images keep their original proportions — shown whole, never cropped */
+.g-cell img {
+    display: block;
+    max-width: 82%;
+    max-height: 82%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .6s ease;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+.g-cell img.is-loaded {
+    opacity: 1;
+}
+
+/* Images with a coloured (non-black) background fill the whole square */
+.g-cell.is-cover img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+}
+
+/* "< home" under the logo — same size and spacing as the intro text on the homepage */
+.gallery-back {
+    text-decoration: none;
+    /* soft blurred black shadow keeps it readable over the images */
+    text-shadow: 0 0 6px black, 0 0 14px black, 0 0 28px black;
+}
+
+/* Logo, top left (same spot as on the other pages) */
+.gallery-logo {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    z-index: 20;
+}
+
+.gallery-logo .site-logo {
+    /* same soft blurred black shadow as the back link */
+    filter: drop-shadow(0 0 6px black) drop-shadow(0 0 14px black);
+}
+
+/* Tooltip sits above the canvas */
+body.gallery-page .coupontooltip {
+    z-index: 30;
+}
+
+@media screen and (max-width: 768px) {
+    /* match the homepage header, which is shown at 90% size on phones */
+    .gallery-logo {
+        top: 28px;
+        left: 30px;
+        transform: scale(0.9);
+        transform-origin: top left;
+    }
+}
+
+/* ---------- Loading screen ---------- */
+.gallery-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .8s ease;
+}
+
+.gallery-loader.is-done {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.gallery-loader-text {
+    font-size: 18px;              /* same size as the intro text */
+    white-space: nowrap;
+}
+
+.gallery-loader .caret {
+    display: inline-block;
+    width: 2px;
+    height: 1.05em;
+    margin-left: 3px;
+    vertical-align: -0.15em;
+    background: white;
+    animation: caret-blink 1s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+    50% { opacity: 0; }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-loader-text { font-size: 16px; }   /* intro text appears at this size on phones */
+}
+
+/* ---------- Symbol trail behind the cursor (gallery only) ---------- */
+.gallery-trail {
+    position: fixed;
+    inset: 0;
+    z-index: 150;                 /* over the images and loading screen; the cursor itself stays on top */
+    pointer-events: none;         /* never blocks clicks or dragging */
+}
+
+/* Shown whole, filling the square's full height (e.g. the data-visualisation posters) */
+.g-cell.is-fit-height img {
+    height: 100%;
+    width: auto;
+    max-height: none;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* ---------- Phones: same pinned header as the homepage / project pages ---------- */
+.gallery-mobile-head { display: none; }
+@media screen and (max-width: 1023px) {
+    .gallery-logo { display: none; }
+    body.gallery-page .gallery-mobile-head {
+        display: block;
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: 0;
+        margin: 0;
+        z-index: 50;            /* above the images, below the loading screen */
+        transform: none;
+    }
+}
+@media screen and (max-width: 1023px) {
+    /* gallery only: the line under the menu runs edge to edge */
+    body.gallery-page .title-space::after { left: 0; right: 0; }
+}
