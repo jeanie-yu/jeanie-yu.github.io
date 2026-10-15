@@ -14,41 +14,19 @@
 
     <div class="title-container-project">
         <div class="title-space">
-            <h1>Jeanie Yu</h1>
-            <a href="index.html" style="text-decoration:none;">
+            <h1 class="logo-heading"><a href="index.html" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()"><img src="jeanielogo.svg" alt="Jeanie Yu" class="site-logo"></a></h1>
+            <a href="index.html" class="project-home" style="text-decoration:none;">
                 <p class="type intro" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
                     &lt; home
                 </p>
             </a>
+            <nav class="site-nav project-nav">
+                <a href="about.html" class="nav-link" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">About Me</a>
+                <a href="index.html" class="nav-link active" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Projects</a>
+                <a href="gallery.html" class="nav-link" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Gallery</a>
+            </nav>
         </div>
 
-        <div class="small-title-container">
-            <div class="tooltip">
-                <span class="tooltiptext">Email</span>
-                <a href="mailto:jeanie920319@gmail.com" target="_blank">
-                    <img src="email.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-                </a>
-            </div>
-            <div class="tooltip">
-                <span class="tooltiptext">Instagram</span>
-                <a href="https://www.instagram.com/jeaniey.design/" target="_blank">
-                    <img src="instagram.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-                </a>
-            </div>
-            <div class="tooltip">
-                <span class="tooltiptext">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/jeanie-yu-b091352a5/" target="_blank">
-                    <img src="linkedin.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-                </a>
-            </div>
-            <div class="tooltip">
-                <span class="tooltiptext">Resume Avalible Upon Request</span>
-                <!-- <a href="https://drive.google.com/file/d/1Kip4PnM1TdioApSbdXEUCrGFt4jl2-h6/view?usp=sharing"
-                    target="_blank"> -->
-                    <img src="resume.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-                </a>
-            </div>
-        </div>
     </div>
 
   <div class="top-space">
@@ -58,8 +36,8 @@
            <h2>Air Company</h2>
            <div class="meta">
                 <p>Identity Design | Branding | 2024</p>
-                <p>Proposal <a href="https://docs.google.com/presentation/d/1T5JpFRQ1X2Z4nuZy78nEkYXXjO5krWDMPFE8wu0C_sw/edit?usp=sharing" target="_blank" style="color:white;"
-                    onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Slides</a></p>
+                <!-- <p>Proposal <a href="https://docs.google.com/presentation/d/1T5JpFRQ1X2Z4nuZy78nEkYXXjO5krWDMPFE8wu0C_sw/edit?usp=sharing" target="_blank" style="color:white;"
+                    onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Slides</a></p> -->
            </div>
            <p>Air Company exists to solve the problem of climate change by engineering scalable, modular technology that helps industries reduce greenhouse gas emissions. Their advanced AIRMADE™ System transforms CO2 into carbon-negative alcohols and fuels, creating endless resources from the most problematic greenhouse gas. From luxury fragrances to jet fuel, the potential for impact is limitless. Their mission is to decarbonize the planet by converting CO2 into sustainable chemicals and fuels, transforming industries and lowering carbon emissions enough to stop the climate crisis.<br><br>
 
@@ -86,6 +64,7 @@
 </div>
 
     <script src="script.js"></script>
+    <script src="project-align.js"></script>
 </body>
 
 </html>

@@ -1,15 +1,12 @@
-@font-face {
-    font-family: 'Pixelify Sans';
-    src: url('DancingScript-VariableFont_wght.ttf');
-    font-family: 'Avenir';
-    src: url('https://fonts.cdnfonts.com/css/avenir');
-}
+/* Avenir: uses the copy installed on the visitor's computer if there is one,
+   otherwise downloads it, so the site shows Avenir on every device */
+@import url('https://fonts.cdnfonts.com/css/avenir');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Avenir';
+    font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     cursor: none;
     color: white;
 }
@@ -447,7 +444,7 @@ h1 {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
 
     :root { --header-scale: 0.6; }   /* 60% on mobile */
 
@@ -672,5 +669,216 @@ h1 {
     0%,
     80% {
         transform: rotateY(360deg)
+    }
+}
+/* Logo (replaces the "Jeanie Yu" heading on every page; links to the homepage) */
+.logo-heading a {
+    display: inline-block;
+}
+
+.site-logo {
+    display: block;
+    height: 72px;
+    width: auto;
+    /* the SVG has blank space around the letters; these line "jeanie" up with the text */
+    margin: -17px 0 -19px -21px;
+}
+
+/* ==========================================================
+   Project pages
+   Desktop: unchanged — logo with "< home" underneath, no menu.
+   Phones: logo on the left, menu (About Me / ↳ Projects / Gallery) on the right, line underneath.
+   ========================================================== */
+.project-nav {
+    display: none;                     /* desktop: no menu on project pages */
+}
+
+@media screen and (max-width: 1023px) {
+    .project-home {
+        display: none;                 /* phones: no "< home" */
+    }
+    .title-container-project {
+        position: relative;
+        transform: none;
+        margin: 0;
+        width: 100%;
+    }
+    .title-container-project .title-space {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        width: auto;
+        margin: 0 20px;
+        padding: 22px 0 16px;
+        border-bottom: 1px solid white;
+        column-gap: 14px;
+    }
+    .title-container-project .logo-heading {
+        margin: 0;
+    }
+    .title-container-project .site-logo {
+        height: 50px;                         /* identical to the homepage logo in the phone layout */
+        margin: -12px -14px -13px -15px;
+    }
+    .project-nav {
+        display: flex;
+        gap: 12px;
+        margin-left: auto;
+    }
+    .project-nav .nav-link {
+        font-size: 17px;
+        line-height: 1.3;
+        white-space: nowrap;
+        text-decoration: none;
+        opacity: 0.45;
+    }
+    .project-nav .nav-link.active {
+        opacity: 1;
+    }
+    .project-nav .nav-link.active::before {
+        content: "↳ ";
+    }
+}
+@media screen and (max-width: 379px) {
+    .title-container-project .title-space { column-gap: 8px; }
+    .title-container-project .site-logo { height: 50px; margin: -12px -14px -13px -15px; }
+}
+@media screen and (max-width: 373px) {
+    .project-nav { gap: 8px; }
+    .project-nav .nav-link { font-size: 14px; }
+}
+@media screen and (max-width: 339px) {
+    .project-nav .nav-link { font-size: 13px; }
+}
+
+/* ==========================================================
+   Project pages: name / line / what it is / line / description,
+   all at the same size as the homepage intro text
+   (18px on desktop, 17px / 14px / 13px on phones, like the homepage)
+   ========================================================== */
+.project-description,
+.project-description h2,
+.project-description p,
+.project-description .meta p {
+    font-size: 18px;
+    line-height: normal;
+}
+.project-description h2 {
+    margin: 0 0 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid white;
+}
+.project-description .meta {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid white;
+}
+@media screen and (max-width: 1023px) {
+    .project-description,
+    .project-description h2,
+    .project-description p,
+    .project-description .meta p { font-size: 17px; }
+}
+@media screen and (max-width: 373px) {
+    .project-description,
+    .project-description h2,
+    .project-description p,
+    .project-description .meta p { font-size: 14px; }
+}
+@media screen and (max-width: 339px) {
+    .project-description,
+    .project-description h2,
+    .project-description p,
+    .project-description .meta p { font-size: 13px; }
+}
+/* desktop: long descriptions scroll inside the fixed text column instead of running off the screen */
+@media screen and (min-width: 1024px) {
+    .project-description {
+        max-height: calc(100vh - 160px);
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+    .project-description::-webkit-scrollbar { display: none; }
+}
+
+/* project pages: no "< home" link on any screen size (the logo still goes home) */
+.project-home { display: none !important; }
+
+/* desktop: project name starts at the same height as the homepage intro ("A graphic designer and RISD alumni…") */
+@media screen and (min-width: 1024px) {
+    .project-description {
+        top: 79px;
+        max-height: calc(100vh - 110px);
+    }
+}
+
+/* phones: no lines between the project name, details and description */
+@media screen and (max-width: 1023px) {
+    .project-description h2,
+    .project-description .meta {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+/* phones: one line under the details (e.g. "Poster Series | 2024"), before the description */
+@media screen and (max-width: 1023px) {
+    .project-description .meta {
+        border-bottom: 1px solid white;
+        padding-bottom: 14px;
+    }
+}
+/* phones: project text, lines and images use the same 20px side margins as the line under the menu */
+@media screen and (max-width: 1023px) {
+    .project-description-container {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}
+/* phones: project name starts at the same height as the homepage intro text */
+@media screen and (max-width: 1023px) {
+    .project-description-container { margin-top: 16px; }
+}
+/* phones: every image / video inside a project fills the text width exactly (same edges as the lines) */
+@media screen and (max-width: 1023px) {
+    .project-images > span,
+    .project-images > div {
+        display: block !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .project-images img,
+    .project-images video,
+    .project-images iframe {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        transform: none !important;
+    }
+}
+
+/* Phones: project pages keep the logo + menu + line pinned to the top while scrolling */
+@media screen and (max-width: 1023px) {
+    .title-container-project {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        z-index: 100001;
+        background: #000;
+    }
+    .top-space { padding-top: 81px; }   /* room for the pinned bar */
+}
+
+/* desktop: the first image / video of each project starts level with the line under the project name */
+@media screen and (min-width: 1024px) {
+    .project-images > img:first-child,
+    .project-images > video:first-child,
+    .project-images > span:first-child > img:first-child {
+        margin-top: -6px !important;
     }
 }
