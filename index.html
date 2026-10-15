@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeanie Yu</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="home.css">
     <link rel="icon" href="projects/star.png" type="image/x-icon"/>
 </head>
 
-<body class="home">
+<body>
     <div class="cursor-white"></div>
 
     <div class="title-container">
         <div class="title-space">
-            <h1 class="logo-heading"><a href="index.html" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()"><img src="jeanielogo.svg" alt="Jeanie Yu" class="site-logo"></a></h1>
+            <h1>Jeanie Yu ⋆｡°.✩</h1>
      
             <p class="type intro">
               <span style="--i:1"> A </span>
@@ -31,7 +30,7 @@
                 <span style="--i:10">studies</span>
                 <span style="--i:11">at</span>
                 <span style="--i:12"><a href="https://www.artcenter.edu/" target="_blank" style="color:white;"
-                    onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">ArtCenter</a>.</span>
+                    onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">ArtCenter.</a></span>
                 <span style="--i:13">Based</span>
                 <span style="--i:14">in</span>
                 <span style="--i:15">LA</span>
@@ -41,37 +40,40 @@
 
                 
             </p>
-
-            <nav class="site-nav">
-                <a href="about.html" class="nav-link" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">About Me</a>
-                <a href="index.html" class="nav-link active" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Projects</a>
-                <a href="gallery.html" class="nav-link" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Gallery</a>
-            </nav>
-
-            <div class="services">
-                <p class="services-intro">This website includes...</p>
-                <ul>
-                    <li>Brand Identity</li>
-                    <li>Environmental Graphics</li>
-                    <li>Publication Design</li>
-                    <li>Motion Design</li>
-                    <li>Creative Coding</li>
-                    <li>Poster Design</li>
-                    <li>Logo Design</li>
-                </ul>
-            </div>
         </div>
-        <!-- Goldfish dot animation, bottom-left of the column (desktop) -->
-        <div class="fish-dots" aria-hidden="true">
-            <video autoplay muted loop playsinline preload="auto">
-                <source src="goldfish-dots.webm" type="video/webm">
-                <source src="goldfish-dots.mp4" type="video/mp4">
-            </video>
+        <div class="small-title-container-main">
+            <div class="tooltip">
+                <span class="tooltiptext">Email</span>
+                <a href="mailto:jeanie920319@gmail.com" target="_blank">
+                    <img src="email.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+                </a>
+            </div>
+            <div class="tooltip">
+                <span class="tooltiptext">Instagram</span>
+                <a href="https://www.instagram.com/jeaniey.design/" target="_blank">
+                    <img src="instagram.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+                </a>
+            </div>
+            <div class="tooltip">
+                <span class="tooltiptext">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/jeanie-yu-b091352a5/" target="_blank">
+                    <img src="linkedin.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+                </a>
+            </div>
+            <div class="tooltip">
+                <span class="tooltiptext">Resume Avalible Upon Request</span>
+                <!-- <a href="https://drive.google.com/file/d/1Kip4PnM1TdioApSbdXEUCrGFt4jl2-h6/view?usp=sharing"
+                    target="_blank"> -->
+                    <img src="resume.png" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+                </a>
+            </div>
+
         </div>
     </div>
 
 
 
+    <div style="height:50px;"></div>
 
     <div class="archive-container">
 
@@ -107,7 +109,7 @@
 <div class="card" data-tooltip="An Interview with Nancy Skolos"
 onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
 <a href="interview-with-nancy-skolos.html">
-<img src="projects/nancy11.jpg" class="archive-adjust6 nancy-cover" alt="">
+<img src="projects/nancy11.jpg" class="archive-adjust6" alt="">
 </a>
 </div>
   
@@ -146,14 +148,14 @@ onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
 
       <div class="card" data-tooltip="Air Company" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
         <a href="air-company.html">
-          <video class="air-cover" src="projects/air-web.mp4" autoplay loop muted playsinline aria-label="Air Company"></video>
+          <img src="projects/air-logo-trans2.gif" class="archive-adjust3" alt="Air Company">
         </a>
       </div>
 
      
-      <div class="card" data-tooltip="Wayfinding System" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-        <a href="wayfinding-system.html">
-          <img src="projects/wayfinding.png" class="archive-adjust4 wayfinding-cover" alt="Wayfinding System">
+      <div class="card" data-tooltip="Man Ray Documentary" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+        <a href="man-ray-documentary.html">
+          <img src="projects/manray.png" class="archive-adjust2" alt="Man Ray Documentary">
         </a>
       </div>
 
@@ -164,9 +166,9 @@ onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
      
       
    
-      <div class="card" data-tooltip="Mapping & Visualizing Data" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-        <a href="mapping-and-visualizing-data.html">
-          <img src="projects/data-posters.gif" class="archive-adjust10" alt="Mapping & Visualizing Data">
+      <div class="card" data-tooltip="Creative Coding" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+        <a href="creative-coding.html">
+          <img src="projects/bubble.gif" class="archive-adjust3" alt="Creative Coding">
         </a>
       </div>
 
@@ -185,9 +187,9 @@ onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
       
 
 
-      <div class="card" data-tooltip="Creative Coding" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-        <a href="creative-coding.html">
-          <img src="projects/bubble.gif" class="archive-adjust3" alt="Creative Coding">
+      <div class="card" data-tooltip="Wayfinding System" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+        <a href="wayfinding-system.html">
+          <img src="projects/wayfinding.png" class="archive-adjust4" alt="Wayfinding System">
         </a>
       </div>
 
@@ -197,9 +199,9 @@ onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
         </a>
       </div>
       
-      <div class="card" data-tooltip="Man Ray Documentary" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-        <a href="man-ray-documentary.html">
-          <img src="projects/manray.png" class="archive-adjust2" alt="Man Ray Documentary">
+      <div class="card" data-tooltip="Mapping & Visualizing Data" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+        <a href="mapping-and-visualizing-data.html">
+          <img src="projects/data1.jpg" class="archive-adjust10" alt="Mapping & Visualizing Data">
         </a>
       </div>
       
@@ -215,23 +217,21 @@ onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
         </a>
       </div>
       
-      <div class="card full-card" data-tooltip="Motion Type Series" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-        <a href="motion-type-series.html">
-          <img src="projects/infectious.gif" alt="Motion Type Series">
+      <div class="card" data-tooltip="The Analects of Confucius" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+        <a href="the-analects-of-confucius.html">
+          <img src="projects/scroll-web.gif" class="archive-adjust3" alt="The Analects of Confucius">
         </a>
       </div>
       
-      <!-- HIDDEN (not deleted): Poster Design — remove these comment marks to show it again
       <div class="card" data-tooltip="Poster Design" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
         <a href="poster-design.html">
           <img src="projects/yjtfinal.jpeg" class="archive-adjust10" alt="Poster Design">
         </a>
       </div>
-      -->
 
-      <div class="card" data-tooltip="The Analects of Confucius" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
-        <a href="the-analects-of-confucius.html">
-          <img src="projects/scroll-web.gif" class="archive-adjust3 analects-cover" alt="The Analects of Confucius">
+      <div class="card" data-tooltip="Motion Type Series" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+        <a href="motion-type-series.html">
+          <img src="projects/infectious.gif" class="archive-adjust3" alt="Motion Type Series">
         </a>
       </div>
       
@@ -258,18 +258,9 @@ onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
 
     </div>
 
-    <!-- Desktop only: contact row at the very bottom of the projects (same as the About page) -->
-    <ul class="home-footer">
-        <li><a href="mailto:jeanie920319@gmail.com" target="_blank" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Email</a></li>
-        <li><a href="https://www.instagram.com/jeaniey.design/" target="_blank" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/in/jeanie-yu-b091352a5/" target="_blank" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">LinkedIn</a></li>
-        <li class="contact-previously">Previously @ <a href="https://www.gensler.com/" target="_blank" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Gensler</a>, <a href="https://www.recdgn.com/" target="_blank" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">REC Design</a></li>
-    </ul>
-
+    <div style="height:80px;"></div>
 
     <script src="script.js"></script>
-    <script src="rules.js"></script>
-    <script src="fish-hello.js"></script>
 </body>
 
 </html>
