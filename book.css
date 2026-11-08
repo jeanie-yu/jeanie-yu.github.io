@@ -56,6 +56,7 @@
     inset: 0;
     overflow: hidden;
     background: #fff;
+    isolation: isolate;   /* the light layer below blends only with this page */
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
@@ -83,6 +84,32 @@
 .leaf__face--back::after  { background: linear-gradient(to left,  rgba(0,0,0,.1), rgba(0,0,0,.03) 3%, transparent 8%); }
 .leaf--cover .leaf__face--front::after     { background: linear-gradient(to right, rgba(0,0,0,.08), transparent 3%); }
 .leaf--cover-back .leaf__face--back::after { background: linear-gradient(to left,  rgba(0,0,0,.08), transparent 3%); }
+
+/* Light on the paper: along the top, bottom and outer edge, and a soft sheen where the page
+   curves into the spine. "screen" only lightens, so it shows on dark areas and leaves white
+   areas white (they keep the gray fold shadow above). */
+.leaf__face::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+.leaf__face--front::before {
+    background:
+        linear-gradient(to right, transparent, rgba(255,255,255,.1) 1.2%, rgba(255,255,255,.2) 2.6%, rgba(255,255,255,.07) 5.5%, transparent 10%),
+        linear-gradient(to left, rgba(255,255,255,.2), rgba(255,255,255,.06) 1.2%, transparent 4%),
+        linear-gradient(to bottom, rgba(255,255,255,.12), transparent 1.5%, transparent 98.5%, rgba(255,255,255,.1));
+    box-shadow: inset -1px 0 0 rgba(255,255,255,.28), inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(255,255,255,.16);
+}
+.leaf__face--back::before {
+    background:
+        linear-gradient(to left, transparent, rgba(255,255,255,.1) 1.2%, rgba(255,255,255,.2) 2.6%, rgba(255,255,255,.07) 5.5%, transparent 10%),
+        linear-gradient(to right, rgba(255,255,255,.2), rgba(255,255,255,.06) 1.2%, transparent 4%),
+        linear-gradient(to bottom, rgba(255,255,255,.12), transparent 1.5%, transparent 98.5%, rgba(255,255,255,.1));
+    box-shadow: inset 1px 0 0 rgba(255,255,255,.28), inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(255,255,255,.16);
+}
 
 /* shading while a page is in motion (opacity set by book.js) */
 .leaf__shade {
