@@ -2,7 +2,9 @@
    under the project name (works even when a long name wraps to two lines). */
 (function () {
     const h2 = document.querySelector('.project-description h2');
-    const first = document.querySelector('.project-images img, .project-images video');
+    // a page can mark something else (like the book preview) to line up instead: data-align-first
+    const first = document.querySelector('.project-images [data-align-first]')
+        || document.querySelector('.project-images img, .project-images video');
     if (!h2 || !first) return;
     const original = first.style.marginTop;   // the page's own spacing, used on phones
 

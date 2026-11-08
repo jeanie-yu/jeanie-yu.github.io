@@ -1,0 +1,141 @@
+/* Interactive flip book (used on if-then-else.html).
+   Sizes come from book.js: --pw = page width, --ph = page height, --t = book thickness. */
+
+.book {
+    --pw: 300px;
+    --ph: 375px;
+    --t: 25px;
+    --turn: 800ms;
+    position: relative;
+    width: 55vw;
+    height: var(--ph);
+    margin-bottom: 17vh;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.book__stage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(var(--pw) * 2);
+    height: var(--ph);
+    transform: translateX(-50%);
+    perspective: calc(var(--pw) * 7);
+}
+
+/* The whole book: shifted and slightly turned when closed so the spine shows */
+.book__body {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    transition: transform var(--turn) cubic-bezier(.45, .05, .25, 1);
+}
+
+.book.is-static .book__body { transition: none; }
+
+.book.is-closed-front .book__body { transform: rotateY(22deg) translateX(calc(var(--pw) * -0.5)); }
+.book.is-closed-back  .book__body { transform: rotateY(-22deg) translateX(calc(var(--pw) * 0.5)); }
+
+/* ---------- leaves (one sheet = two pages) ---------- */
+
+.leaf {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: var(--pw);
+    height: var(--ph);
+    transform-origin: left center;
+    transform-style: preserve-3d;
+}
+
+.leaf__face {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #fff;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.leaf__face--back { transform: rotateY(180deg); }
+
+.book .leaf__face img,
+.book .book__spine-face img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* fold shadow along the spine */
+.leaf__face::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+.leaf__face--front::after { background: linear-gradient(to right, rgba(0,0,0,.1), rgba(0,0,0,.03) 3%, transparent 8%); }
+.leaf__face--back::after  { background: linear-gradient(to left,  rgba(0,0,0,.1), rgba(0,0,0,.03) 3%, transparent 8%); }
+.leaf--cover .leaf__face--front::after     { background: linear-gradient(to right, rgba(0,0,0,.08), transparent 3%); }
+.leaf--cover-back .leaf__face--back::after { background: linear-gradient(to left,  rgba(0,0,0,.08), transparent 3%); }
+
+/* shading while a page is in motion (opacity set by book.js) */
+.leaf__shade {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.leaf__face--front .leaf__shade { background: linear-gradient(to right, rgba(0,0,0,.35), rgba(0,0,0,.08) 45%, rgba(0,0,0,.18)); }
+.leaf__face--back  .leaf__shade { background: linear-gradient(to left,  rgba(0,0,0,.35), rgba(0,0,0,.08) 45%, rgba(0,0,0,.18)); }
+
+/* ---------- spine ---------- */
+
+.book__spine {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: var(--t);
+    height: var(--ph);
+    transform-origin: left center;
+    transform: rotateY(90deg);
+    transform-style: preserve-3d;
+}
+.book__spine-face {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 400ms ease;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.book__spine-face--back { transform: rotateY(180deg); }
+.book.is-closed-front .book__spine-face--back,
+.book.is-closed-back  .book__spine-face--front { opacity: 1; }
+
+.book__spine-face::after {   /* gives the spine a little roundness */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,.12), transparent 30%, transparent 70%, rgba(0,0,0,.12));
+}
+
+/* ---------- fallback when 3D transforms are not available ---------- */
+
+.book--flat .book__body { transform: none !important; }
+.book--flat .book__spine { display: none; }
+.book--flat .leaf__face { backface-visibility: visible; }
+.book--flat .leaf__face--back { transform: scaleX(-1); visibility: hidden; }
+.book--flat .leaf.is-flipped .leaf__face--back { visibility: visible; }
+.book--flat .leaf.is-flipped .leaf__face--front { visibility: hidden; }
+
+@media screen and (max-width: 1023px) {
+    .book { width: 100%; }   /* keeps the 17vh gap, same as between the photos */
+}

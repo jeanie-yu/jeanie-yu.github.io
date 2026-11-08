@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeanie Yu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="book.css">
+    <link rel="icon" href="projects/star.png" type="image/x-icon"/>
+</head>
+
+<body>
+
+    <div class="cursor-white"></div>
+
+    <div class="title-container-project">
+        <div class="title-space">
+            <h1 class="logo-heading"><a href="index.html" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()"><img src="jeanielogo.svg" alt="Jeanie Yu" class="site-logo"></a></h1>
+            <a href="index.html" class="project-home" style="text-decoration:none;">
+                <p class="type intro" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">
+                    &lt; home
+                </p>
+            </a>
+            <nav class="site-nav project-nav">
+                <a href="about.html" class="nav-link" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">About Me</a>
+                <a href="index.html" class="nav-link active" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Projects</a>
+                <a href="gallery.html" class="nav-link" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">Gallery</a>
+            </nav>
+        </div>
+
+    </div>
+
+  <div class="top-space">
+<div class="project-description-container">
+    <div class="project-description-wrapper">
+        <div class="project-description">
+           <h2>if / then / else</h2>
+           <div class="meta">
+                <p>Exhibition Identity | Editorial Design | 2026</p>
+           </div>
+           if / then / else is a conceptual exhibition identity for MOCA exploring the relationship between code, systems, and artistic expression. Inspired by the logic of programming, the visual identity translates rules, repetition, and variation into a flexible graphic system across print and digital applications.
+           <br>
+          </p>
+        </div>
+    </div>
+
+    <div class="project-images">
+
+      <!-- interactive book preview: pages are in projects/if-then-else-book/, behaviour in book.js -->
+      <div class="book" data-align-first data-src="projects/if-then-else-book/" data-pages="128" style="margin-top:-30px;"></div>
+
+      <img src="projects/ifthenelse4.webp" style="margin-top:-50px;">
+      <img src="projects/ifthenelse5.webp" style="margin-top:-50px;">
+      <img src="projects/ifthenelse3.webp" style="margin-top:-50px;">
+      <img src="projects/ifthenelse1.webp" style="margin-top:-50px;">
+      <img src="projects/ifthenelse2.webp" style="margin-top:-50px;">
+      <img src="projects/ifthenelse6.webp" style="margin-top:-50px;margin-bottom:80px;">
+
+    </div>
+</div>
+
+    <script src="script.js"></script>
+    <script src="project-align.js"></script>
+    <script src="book.js"></script>
+</body>
+
+</html>
